@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">Julia Pearson</a>
+    <a class="navbar-brand" href="{% url 'home' %}">Julia Pearson</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -12,18 +12,16 @@
             Art
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
+            {% include 'category_list.html' %}
           </ul>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link" href="#">About</a>
+          <a class="nav-link" href="{% url 'about' %}">About</a>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link" href="#">Instagram</a>
+          <a class="nav-link" href="https://www.instagram.com/juliapearson.art/">Instagram</a>
         </li>
 
       </ul>

@@ -21,7 +21,7 @@ from pages.views import home_view, about_view, category_view
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', home_view),
-    path('about/', about_view),
-    path('<slug:category_name>/', category_view),
+    path('', home_view, name='home'),
+    path('about/', about_view, name='about'),
+    path('category/<str:category_name>/', category_view, name='category'),
 ]
