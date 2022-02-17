@@ -9,4 +9,8 @@ class Category(models.Model):
 
   def get_absolute_url(self):
       return reverse("category", kwargs={"pk": self.pk})
-  
+
+class About(models.Model):
+  name = models.CharField(max_length=50)
+  email = models.EmailField()
+  instagram_username = models.CharField(max_length=50)
