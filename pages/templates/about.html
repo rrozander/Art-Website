@@ -1,5 +1,10 @@
 {% extends "base.html" %}
 {% block content %}
   <h1>About Page</h1>
-  <p>Content for the about page</p>
+  <b>{{ about.name }}</b>
+  <p>{{ about.description }}</p>
+  <b>Email: {{ about.email }}</b>
+  <br>
+  <b>Instagram: {{ about.instagram_username }}</b>
+
 {% endblock %}
