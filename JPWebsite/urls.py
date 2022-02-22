@@ -15,6 +15,8 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from django.conf import settings
+from django.conf.urls.static import static
 
 from pages.views import home_view, about_view, category_view
 
@@ -24,4 +26,5 @@ urlpatterns = [
     path('', home_view, name='home'),
     path('about/', about_view, name='about'),
     path('category/<str:category_name>/', category_view, name='category'),
-]
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+

@@ -5,11 +5,10 @@ from pages.models import Category
 
 class Art(models.Model):
   title = models.CharField(max_length=50)
-  description = models.TextField()
   creation_date = models.DateField()
   homepage = models.BooleanField()
   category = models.ForeignKey(Category, on_delete=models.CASCADE)
 
 class ArtImage(models.Model):
-  #image = models.ImageField()
+  image = models.ImageField()
   art_project = models.ForeignKey(Art, on_delete=models.CASCADE)
