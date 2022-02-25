@@ -1,8 +1,9 @@
 {% extends "base.html" %}
+{% load static %}
 
 {% block content %}
 <h1>Home Page</h1>
 <p>Home page content</p>
-<img src="/media/images/error_image.png" alt="error image">
+<img src="{% static 'pages/error_image.png' %}" alt="image">
+<img src="{% static 'images/mountains.png' %}" alt="mountian">
 {% endblock %}
-<!-- "C:\Users\riley\Julia Pearson Art\pages\templates\static\images\error_image.png" -->
