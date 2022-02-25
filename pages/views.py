@@ -2,6 +2,7 @@ from urllib import response
 from django.shortcuts import get_object_or_404, render
 
 from .models import Category, About
+from art.models import ArtImage
 
 # Create your views here.
 def home_view(request):
@@ -16,8 +17,10 @@ def about_view(requests):
 
 def category_view(request, category_name):
   category_obj = get_object_or_404(Category, category_name=category_name)
+  Art_Projects = ArtImage.objects.all()
   context = {
-    'category': category_obj
+    'category': category_obj,
+    'art_projects' : Art_Projects,
   }
   return render(request, 'category_page.html', context)
 

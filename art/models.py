@@ -10,5 +10,5 @@ class Art(models.Model):
   category = models.ForeignKey(Category, on_delete=models.CASCADE)
 
 class ArtImage(models.Model):
-  image = models.ImageField()
+  image = models.ImageField(upload_to='art_images/')
   art_project = models.ForeignKey(Art, on_delete=models.CASCADE)
