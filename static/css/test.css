@@ -1,8 +1,22 @@
 h1 {
   color: blueviolet;
-  background-color: aliceblue;
 }
 p {
-  color: maroon;
-  background-color: beige;
+  color: red;
+}
+body {
+  padding-left: 20px;
+}
+.footer {
+  background-color: lightsalmon;
+}
+.content {
+ background-color: aqua;
+}
+.header {
+ background-color: darkgoldenrod;
+}
+.art_image img {
+  height: 200px;
+  max-width: 150px;
 }

@@ -11,6 +11,9 @@ class Category(models.Model):
   def get_absolute_url(self):
       return reverse("category", kwargs={"pk": self.pk})
 
+  def __str__(self):
+    return self.category_name
+
 class About(models.Model):
   name = models.CharField(max_length=50)
   email = models.EmailField()

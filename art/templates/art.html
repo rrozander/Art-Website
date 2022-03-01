@@ -1,4 +1,6 @@
 {% for art in art_projects %}
-  <img src="{{ art.image.url }}" alt="art">
+  <div class="art_image">
+    <img src="{{ art.image.url }}" alt="art">
+  </div>
   <p>{{art.art_project.title}}</p>
 {% endfor %}

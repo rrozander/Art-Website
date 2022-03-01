@@ -17,10 +17,13 @@ def about_view(requests):
 
 def category_view(request, category_name):
   category_obj = get_object_or_404(Category, category_name=category_name)
-  Art_Projects = ArtImage.objects.all()
+
+  # querylist of art for the displayed art page
+  page_art_list = ArtImage.objects.filter(art_project__category=category_obj.id)
+  
   context = {
     'category': category_obj,
-    'art_projects' : Art_Projects,
+    'art_projects' : page_art_list,
   }
   return render(request, 'category_page.html', context)
 

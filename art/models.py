@@ -9,6 +9,9 @@ class Art(models.Model):
   homepage = models.BooleanField()
   category = models.ForeignKey(Category, on_delete=models.CASCADE)
 
+  def __str__(self):
+      return self.title
+
 class ArtImage(models.Model):
   image = models.ImageField(upload_to='art_images/')
   art_project = models.ForeignKey(Art, on_delete=models.CASCADE)
