@@ -16,6 +16,10 @@ body {
 .header {
  background-color: darkgoldenrod;
 }
+.art_image {
+  display: inline-block;
+  padding-left: 30px;
+}
 .art_image img {
   height: 200px;
   max-width: 150px;
