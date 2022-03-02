@@ -4,14 +4,31 @@ h1 {
 p {
   color: red;
 }
-body {
-  padding-left: 20px;
-}
+
 .footer {
-  background-color: lightsalmon;
+  position: bottom;
+  bottom: 0;
+
+  width: 100%;
+  height: 120px;
+
+  text-align: left;
+  padding-left: 7%;
+  background-color: lightgray;
+}
+.footer a {
+  color: gray;
+}
+.footer a:hover {
+  color: rgb(109, 108, 108);
+}
+.footer p {
+  color: rgb(49, 49, 49);
+  margin-top: 1rem;
 }
 .content {
  background-color: aqua;
+ padding-left: 20px;
 }
 .header {
  background-color: darkgoldenrod;
