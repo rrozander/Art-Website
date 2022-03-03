@@ -2,12 +2,15 @@ from urllib import response
 from django.shortcuts import get_object_or_404, render
 
 from .models import Category, About
-from art.models import ArtImage
 from art.models import Project
 
 # Create your views here.
 def home_view(request):
-  return render(request, 'home.html', {})
+  home_art_list = Project.objects.filter(homepage=True)
+  context = {
+    'project_list': home_art_list
+  }
+  return render(request, 'home.html', context)
 
 
 def about_view(requests):

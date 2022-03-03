@@ -4,6 +4,5 @@
 {% block content %}
 <h1>Home Page</h1>
 <p>Home page content</p>
-<img src="{% static 'pages/error_image.png' %}" alt="image">
-<img src="{% static 'images/mountains.png' %}" alt="mountian">
+{% include 'art.html' %}
 {% endblock %}
