@@ -19,12 +19,13 @@ from django.conf import settings
 from django.conf.urls.static import static
 
 from pages.views import home_view, about_view, category_view
-
+from art.views import art_carousel_view
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', home_view, name='home'),
     path('about/', about_view, name='about'),
     path('category/<str:category_name>/', category_view, name='category'),
+    path('category/<str:category_name>/<str:title>/', art_carousel_view, name='art_carousel'),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 

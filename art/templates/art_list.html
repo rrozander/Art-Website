@@ -2,7 +2,7 @@
   <h3>{{project.title}}</h3>
   {% for art_image in project.images.all %}
     <div class="art_image">
-      <img src="{{ art_image.image.url }}" alt="art">
+      <img src="{{ art_image.image.url }}" alt="{{ project.title }} id:{{ art_image.id }}">
     </div>
   {% endfor %} 
 {% endfor %}
