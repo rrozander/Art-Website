@@ -25,7 +25,7 @@ def category_view(request, category_name):
   category_obj = get_object_or_404(Category, category_name=category_name)
 
   # querylist of art for the displayed art page
-  project_list = Project.objects.filter(category=category_obj.id)
+  project_list = Project.objects.filter(category=category_obj.id).order_by('creation_date')
   
   # page_art_list = Project.artimage_set.all()
   context = {

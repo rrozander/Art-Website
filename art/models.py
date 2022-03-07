@@ -16,5 +16,9 @@ class ArtImage(models.Model):
   image = models.ImageField(upload_to='art_images/')
   project = models.ForeignKey(Project, related_name='images', on_delete=models.CASCADE)
 
+  def delete(self, using=None, keep_parents=False):
+    self.image.delete()
+    super().delete()
+
   def __str__(self):
     return self.project.title
