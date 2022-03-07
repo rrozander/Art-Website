@@ -1,8 +1,8 @@
 {% for project in project_list %}
-  <h3>{{project.title}}</h3>
-  {% for art_image in project.images.all %}
+  <h3>{{ project.title|title }}</h3>
+  <a href="{% url 'art_carousel' category.category_name project.title %}">
     <div class="art_image">
-      <img src="{{ art_image.image.url }}" alt="{{ project.title }} id:{{ art_image.id }}">
+      <img src="{{ project.images.first.image.url }}" alt="{{ project.title }} id:{{ art_image.id }}">
     </div>
-  {% endfor %} 
+  </a>
 {% endfor %}

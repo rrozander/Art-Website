@@ -2,7 +2,7 @@
 
 {% block content %}
   <h1>{{ project.title }}</h1>
-
+  
   <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
 
     <div class="carousel-indicators">
@@ -14,11 +14,11 @@
 
     <div class="carousel-inner">
       <div class="carousel-item active"> 
-        <img src="{{ first_image.image.url }}" alt="{{ project.title }} id:{{ art_image.id }}">  
+        <img src="{{ first_image.image.url }}" class="rounded mx-auto d-block" alt="{{ project.title }} id:{{ art_image.id }}">  
       </div>
       {% for art_image in other_images %}
         <div class="carousel-item">   
-          <img src="{{ art_image.image.url }}" alt="{{ project.title }} id:{{ art_image.id }}">  
+          <img src="{{ art_image.image.url }}" class="rounded mx-auto d-block" alt="{{ project.title }} id:{{ art_image.id }}">  
         </div>
       {% endfor %}
     </div>
@@ -33,4 +33,5 @@
     </button>
 
   </div>
+  
 {% endblock %}
