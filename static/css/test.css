@@ -90,8 +90,12 @@ footer {
 }
 .about-content {
   padding-left: 30px;
+  padding-top: 30px;
 }
 .about-content a {
   color: inherit;
   /* text-decoration: inherit; */
+}
+.about-content p {
+  width: 50%;
 }

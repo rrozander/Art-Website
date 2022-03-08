@@ -26,3 +26,6 @@ class About(models.Model):
   def clean(self, *args, **kwargs):
     if not self.pk and About.objects.exists():
       raise ValidationError('There can only be one about instance')
+  
+  def __str__(self):
+    return self.name
