@@ -1,8 +1,10 @@
-{% for project in project_list %}
-  <h3>{{ project.title|title }}</h3>
-  <a href="{% url 'art_carousel' category.category_name project.title %}">
-    <div class="art_image">
-      <img src="{{ project.images.first.image.url }}" alt="{{ project.title }} id:{{ art_image.id }}">
+<div class="art-list">
+  {% for project in project_list %}
+    <div class="art-icon">
+      <a href="{% url 'art_carousel' project.category.category_name project.title %}">      
+        <img src="{{ project.images.first.image.url }}" alt="{{ project.title }} id:{{ art_image.id }}">
+        <div class="art-overlay">{{ project.title|title }}</div>
+      </a>
     </div>
-  </a>
-{% endfor %}
+  {% endfor %}
+</div>
