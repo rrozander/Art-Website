@@ -1,13 +1,12 @@
 .navbar {
   box-shadow: 2px 2px 4px 5px #ccc;
 }
-
-.navbar a {
-  font-weight: bold;
-  color: rgb(59, 59, 59);  
-}
 .navbar li {
-  padding: 0px 5px;
+  padding: 0px 10px;
+  font-size: large;
+}
+.navbar ul {
+  padding-right: 5%;
 }
 #navbarHomeButton {
   font-family: sans-serif;
@@ -17,7 +16,10 @@
   margin-right: 20px;
   margin-top: 5px;
 }
-
+nav {
+  font-weight: bold;
+  background-color: #ccc;
+}
 footer {
   padding: 10px 0px;
 }
@@ -53,8 +55,8 @@ footer {
 }
 .art-icon {
   position: relative;
-  width: 80%;
-  max-width: 500px;
+  width: 90%;
+  max-width: 600px;
   height: fit-content;
 }
 .art-icon img {
@@ -87,6 +89,7 @@ footer {
   grid-template-columns: repeat(2, 1fr);
   gap: 25px;
   padding-left: 30px;
+  align-items: center;
 }
 .about-content {
   padding-left: 30px;
