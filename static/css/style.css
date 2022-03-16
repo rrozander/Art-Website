@@ -1,3 +1,4 @@
+/* Navbar */
 .navbar {
   box-shadow: 2px 2px 4px 5px #ccc;
 }
@@ -20,6 +21,8 @@ nav {
   font-weight: bold;
   background-color: #ccc;
 }
+
+/* Footer */
 footer {
   padding: 10px 0px;
 }
@@ -46,6 +49,7 @@ footer {
   margin-top: 1rem;
 }
 
+/* Page Content */
 .content {
  padding: 10px 5%;
 }
@@ -53,6 +57,20 @@ footer {
   padding: 20px 5px;
   font-weight: bold;
 }
+
+/* About */
+.about-content {
+  padding-left: 30px;
+  padding-top: 30px;
+}
+.about-content a {
+  color: inherit;
+}
+.about-content p {
+  width: 50%;
+}
+
+/* Art List */
 .art-icon {
   position: relative;
   width: 90%;
@@ -80,10 +98,6 @@ footer {
 .art-icon:hover .art-overlay {
   opacity: 1;
 }
-.carousel-inner img {
-  height: 600px;
-  max-width: 100%;
-}
 .art-list {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -91,14 +105,9 @@ footer {
   padding-left: 30px;
   align-items: center;
 }
-.about-content {
-  padding-left: 30px;
-  padding-top: 30px;
-}
-.about-content a {
-  color: inherit;
-  /* text-decoration: inherit; */
-}
-.about-content p {
-  width: 50%;
+
+/* Carousel */
+.carousel-inner img {
+  height: 600px;
+  max-width: 100%;
 }
