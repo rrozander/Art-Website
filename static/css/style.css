@@ -40,6 +40,9 @@ footer {
   color: rgb(109, 108, 108);
   text-decoration: underline;
 }
+.footer p {
+  color: rgb(151, 151, 151);
+}
 body {
   display: flex;
   min-height: 100vh;
