@@ -3,7 +3,4 @@
 
 # Django
 *.sqlite3
-*.log
-*.pot
-*.pyc
 __pycache__
