@@ -1,0 +1,6 @@
+# Text Backup files
+*.bak
+
+# Django
+*.sqlite3
+
