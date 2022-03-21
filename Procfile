@@ -1,0 +1,1 @@
+web: gunicorn JPWebsite.wsgi --log-file -
