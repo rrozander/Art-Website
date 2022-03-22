@@ -18,7 +18,7 @@ class About(models.Model):
   name = models.CharField(max_length=50)
   email = models.EmailField()
   description = models.TextField()
-  instagram_username = models.CharField(max_length=50)
+  instagram_username = models.CharField(max_length=50, default='')
 
   def save(self, *args, **kwargs):
     return super(About, self).save(*args, **kwargs)
