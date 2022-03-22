@@ -41,8 +41,8 @@ def category_list(request):
   queryset = Category.objects.all 
   return { 'category_list': queryset }
 
-def insta_username(request):
-  about_obj = About.objects.first()
-  username_obj = about_obj.instagram_username
-  return { 'insta_username':username_obj }
+# def insta_username(request):
+#   about_obj = About.objects.first()
+#   username_obj = about_obj.instagram_username
+#   return { 'insta_username':username_obj }
 #------------------------------------------------
