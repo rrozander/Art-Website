@@ -73,7 +73,7 @@ TEMPLATES = [
                 'django.contrib.messages.context_processors.messages',
                 # added context processor for category list to be loaded
                 'pages.views.category_list',
-                # 'pages.views.insta_username',
+                'pages.views.insta_username',
             ],
         },
     },

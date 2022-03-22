@@ -1,3 +1,4 @@
+from asyncio.windows_events import NULL
 from urllib import response
 from django.shortcuts import get_object_or_404, render
 
@@ -41,8 +42,11 @@ def category_list(request):
   queryset = Category.objects.all 
   return { 'category_list': queryset }
 
-# def insta_username(request):
-#   about_obj = About.objects.first()
-#   username_obj = about_obj.instagram_username
-#   return { 'insta_username':username_obj }
+def insta_username(request):
+  about_obj = About.objects.first()
+  if about_obj!=NULL:
+    username_obj = about_obj.instagram_username
+  else:
+    username_obj = ''
+  return { 'insta_username':username_obj }
 #------------------------------------------------
