@@ -141,6 +141,12 @@ STATICFILES_DIRS = [
   BASE_DIR / 'static',
 ]
 
+# Sends Media file storage to AWS S3 Bucket
+# AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
+# AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
+
+# DEFAULT_FILE_STORAGE = 'JPWebsite.media_storage.MediaStorage'
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
