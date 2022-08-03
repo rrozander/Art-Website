@@ -1,6 +1,0 @@
-# Text Backup files
-*.bak
-
-# Django
-*.sqlite3
-__pycache__
