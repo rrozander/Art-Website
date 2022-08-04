@@ -44,5 +44,5 @@ def category_list(request):
 def insta_username(request):
   about_obj = About.objects.first()
   username_obj = about_obj.instagram_username
-  return { 'insta_username':username_obj }
+  return { 'insta_username': username_obj }
 #------------------------------------------------

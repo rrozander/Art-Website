@@ -3,8 +3,9 @@ from django.shortcuts import get_object_or_404, render
 from .models import Project
 
 # Create your views here.
-def art_carousel_view(request, category_name, title):
-  project = get_object_or_404(Project, title=title)
+def art_carousel_view(request, category_name, title, pk):
+  project = get_object_or_404(Project, pk=pk)
+
   # allows for first image in image set to be active in carousel
   first_image = project.images.first()
   other_images = project.images.exclude(pk=first_image.pk)

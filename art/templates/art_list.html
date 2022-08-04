@@ -1,7 +1,7 @@
 <div class="art-list">
   {% for project in project_list %}
     <div class="art-icon">
-      <a href="{% url 'art_carousel' project.category.category_name project.title %}">      
+      <a href="{% url 'art_carousel' project.category.category_name project.pk project.title %}">      
         <img src="{{ project.images.first.image.url }}" alt="{{ project.title }} id:{{ art_image.id }}">
         <div class="art-overlay">{{ project.title|title }}</div>
       </a>
