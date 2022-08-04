@@ -5,6 +5,10 @@
 .navbar li {
   padding: 0px 10px;
   font-size: large;
+  opacity: 0.8;
+}
+.navbar li:hover {
+  opacity: 1;
 }
 .navbar ul {
   padding-right: 5%;
@@ -17,8 +21,17 @@
   margin-right: 20px;
   margin-top: 5px;
 }
-nav {
+#navbarHomeButton:hover {
+  font-family: sans-serif;
   font-weight: bold;
+  color: black;
+  border-color: rgb(84, 84, 84);
+  padding: 5px;
+  margin-right: 20px;
+  margin-top: 5px;
+}
+nav {
+  font-weight: 700;
   background-color: #ccc;
 }
 
