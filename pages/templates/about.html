@@ -2,11 +2,16 @@
 {% block content %}
   <h1>About</h1>
   <div class="about-content">
-    <h3>{{ about.name }}</h3>
-    <p>{{ about.description }}</p>
-    <i class="fa-solid fa-envelope"></i><b> <a href="mailto:{{ about.email }}">{{ about.email }}</a></b>
-    <br>
-    <i class="fa-brands fa-instagram"></i><b> <a href="https://www.instagram.com/{{ insta_username }}/">{{ about.instagram_username }}</a></b>
+    <div class="about-info">
+      <h3>{{ about.name }}</h3>
+      <p>{{ about.description }}</p>
+      <i class="fa-solid fa-envelope"></i><b> <a href="mailto:{{ about.email }}">{{ about.email }}</a></b>
+      <br>
+      <i class="fa-brands fa-instagram"></i><b> <a href="https://www.instagram.com/{{ insta_username }}/">{{ about.instagram_username }}</a></b>
+    </div>
+    <div class="about-photo">
+      <img src="{{ about.photo.url }}" alt="Profile Photo">
+    </div>
   </div>
 
 {% endblock %}

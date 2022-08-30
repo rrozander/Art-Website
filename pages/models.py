@@ -19,6 +19,7 @@ class About(models.Model):
   email = models.EmailField()
   description = models.TextField()
   instagram_username = models.CharField(max_length=50)
+  photo = models.ImageField(upload_to='about/', default='default/error image.png')
 
   def save(self, *args, **kwargs):
     return super(About, self).save(*args, **kwargs)

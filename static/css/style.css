@@ -70,14 +70,27 @@ body {
 
 /* About */
 .about-content {
+  display: inline-flex;
   padding-left: 30px;
   padding-top: 30px;
 }
 .about-content a {
   color: inherit;
+  text-decoration: none;
+}
+.about-content a:hover {
+  color: inherit;
+  text-decoration: underline;
 }
 .about-content p {
   width: 50%;
+  padding-left: 15px;
+}
+.about-photo {
+  margin-right: 10%;
+}
+.about-photo img {
+  width: 300px;
 }
 
 /* Art List */
