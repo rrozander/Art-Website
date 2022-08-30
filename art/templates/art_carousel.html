@@ -1,38 +1,40 @@
-{% extends "base.html" %}
+{% extends "base_no_nav.html"%}
 
 {% block content %}
-  <h1>{{ project.title|title }}</h1>
-  
-  <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
-    {% if other_images %}
-      <div class="carousel-indicators">
-        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-        {% for num in count_list %}
-          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="{{ num }}" aria-label="Slide {{ num|add:1 }}"></button>
+  <div id="carouselProjectTitle">
+    <h1>{{ project.title|title }}</h1>
+  </div>
+  <div id="carousel">
+    <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+      {% if other_images %}
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          {% for num in count_list %}
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="{{ num }}" aria-label="Slide {{ num|add:1 }}"></button>
+          {% endfor %}
+        </div>
+      {% endif %}
+      <div class="carousel-inner">
+        <div class="carousel-item active"> 
+          <img src="{{ first_image.image.url }}" class="rounded mx-auto d-block" alt="{{ project.title }} id:{{ art_image.id }}">  
+        </div>
+        {% for art_image in other_images %}
+          <div class="carousel-item">   
+            <img src="{{ art_image.image.url }}" class="rounded mx-auto d-block" alt="{{ project.title }} id:{{ art_image.id }}">  
+          </div>
         {% endfor %}
       </div>
-    {% endif %}
-    <div class="carousel-inner">
-      <div class="carousel-item active"> 
-        <img src="{{ first_image.image.url }}" class="rounded mx-auto d-block" alt="{{ project.title }} id:{{ art_image.id }}">  
-      </div>
-      {% for art_image in other_images %}
-        <div class="carousel-item">   
-          <img src="{{ art_image.image.url }}" class="rounded mx-auto d-block" alt="{{ project.title }} id:{{ art_image.id }}">  
-        </div>
-      {% endfor %}
-    </div>
 
-    {% if other_images %}
-      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
-    {% endif %}
+      {% if other_images %}
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      {% endif %}
+    </div>
   </div>
-  
 {% endblock %}

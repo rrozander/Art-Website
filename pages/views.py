@@ -43,6 +43,8 @@ def category_list(request):
 
 def insta_username(request):
   about_obj = About.objects.first()
+  if about_obj == None:
+    return ''
   username_obj = about_obj.instagram_username
   return { 'insta_username': username_obj }
 #------------------------------------------------
