@@ -13,12 +13,15 @@ class Project(models.Model):
       return self.title
 
 class ArtImage(models.Model):
-  image = models.ImageField(upload_to='art_images/')
+  image = models.ImageField(upload_to='art_images/', default='default/error image.png')
   project = models.ForeignKey(Project, related_name='images', on_delete=models.CASCADE)
 
+  # Will delete project if you delete the last image. 
   def delete(self, using=None, keep_parents=False):
     self.image.delete()
     super().delete()
+    if self.project.images.first() is None:
+      self.project.delete()
 
   def __str__(self):
     return self.project.title
